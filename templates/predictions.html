@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictions</title>
+</head>
+<body>
+    <h1>Predicted Products</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product['cnn_class_name'] }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/grouping" method="get">
+        <input type="submit" value="Next">
+    </form>
+    <br>
+    <a href="/">Go back</a>
+</body>
+</html>
